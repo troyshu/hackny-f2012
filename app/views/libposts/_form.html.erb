@@ -1,0 +1,25 @@
+<%= form_for(@libpost) do |f| %>
+  <% if @libpost.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@libpost.errors.count, "error") %> prohibited this libpost from being saved:</h2>
+
+      <ul>
+      <% @libpost.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :text %><br />
+    <%= f.text_field :text %>
+  </div>
+  <div class="field">
+    <%= f.label :values %><br />
+    <%= f.text_field :values %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
