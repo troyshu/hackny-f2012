@@ -1,4 +1,8 @@
 Hacknyf2012::Application.routes.draw do
+  resources :libposts
+
+  resources :libs
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
