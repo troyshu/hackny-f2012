@@ -11,13 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120929230339) do
+ActiveRecord::Schema.define(:version => 20120930010907) do
 
   create_table "libposts", :force => true do |t|
     t.string   "text"
-    t.string   "values"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
+    t.string   "text_framework_array"
+    t.string   "keywords_array"
   end
 
   create_table "libs", :force => true do |t|

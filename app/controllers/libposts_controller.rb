@@ -56,6 +56,10 @@ class LibpostsController < ApplicationController
   # POST /libposts
   # POST /libposts.json
   def create
+
+    #create new lib post
+    
+    
     @libpost = Libpost.new(params[:libpost])
 
     respond_to do |format|
