@@ -1,5 +1,13 @@
 <h1>Fill out a lib</h1>
 
-<%= render 'form' %>
+<% @frame_text.each do |text_piece| %>
+	<%= "#{text_piece} ____" %>
+<% end %>
+<%= @last_text_piece %>
 
-<%= link_to 'Back', libposts_path %>
+<% @types.each do |keyword_type| %>
+	<br><input type="textbox" value="<%= keyword_type %>">
+<% end %>
+
+<br>
+<input type="button" value="Submit">

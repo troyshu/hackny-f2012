@@ -35,17 +35,17 @@ class LibpostsController < ApplicationController
 
     #parse out the types
     @frame_text = template.text.split(/\[[a-z0-9]*\]/)
+    @last_text_piece = @frame_text.last
+    @frame_text = @frame_text[0..@frame_text.count-2]
+    
     @types = template.text.scan(/\[[a-z0-9]*\]/)
 
-    logger.debug("frame text: #{frame_text}")
-    logger.debug("types: #{types}")
+    logger.debug("frame text: #{@frame_text}")
+    logger.debug("types: #{@types}")
 
 
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @libpost }
-    end
+    
   end
 
   # GET /libposts/1/edit
